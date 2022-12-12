@@ -19,9 +19,9 @@ class DesktopPet(QWidget):
         self.init()
         # 托盘化初始
         self.initPall()
-        # 宠物静态gif图加载
+        # 静态gif图加载
         self.initPetImage()
-        # 宠物正常待机，实现随机切换动作
+        # 正常待机，实现随机切换动作
         #self.petNormalAction()
         #self.time()
         #self.Text()
@@ -49,7 +49,7 @@ class DesktopPet(QWidget):
         # 设置右键显示最小化的菜单项
         # 菜单项退出，点击后调用quit函数
         quit_action = QAction('退出', self, triggered=self.quit)
-        # 设置这个点击选项的图片
+        # 设置点击选项的图片
         quit_action.setIcon(QIcon(icons))
         # 菜单项显示，点击后调用showing函数
         showing = QAction(u'显示', self, triggered=self.showwin)
@@ -77,9 +77,9 @@ class DesktopPet(QWidget):
         self.close()
         sys.exit()
 
-    # 显示宠物
+    # 显示
     def showwin(self):
-        # setWindowOpacity（）设置窗体的透明度，通过调整窗体透明度实现宠物的展示和隐藏
+        # setWindowOpacity（）设置窗体的透明度，通过调整窗体透明度实现展示和隐藏
         i = 0.0
         while i<=1:
             self.setWindowOpacity(i)
@@ -102,17 +102,17 @@ class DesktopPet(QWidget):
         self.image.setMovie(self.movie)
         self.movie.start()
         self.resize(1024, 1024)
-        # 调用自定义的randomPosition，会使得宠物出现位置随机
+        # 调用自定义的randomPosition，会使得出现位置随机,未使用
         self.randomPosition()
         # 展示
         #self.setWindowOpacity(0)
         self.show()
         '''
-        # 将宠物正常待机状态的动图放入pet1中
+        # 将正常待机状态的动图放入pet1中
         self.pet1 = []
         for i in os.listdir("normal"):
             self.pet1.append("normal/" + i)
-        # 将宠物正常待机状态的对话放入pet2中
+        # 将正常待机状态的对话放入pet2中
         self.dialog = []
         # 读取目录下dialog文件
         with open("dialog.txt", "r") as f:
@@ -133,7 +133,7 @@ class DesktopPet(QWidget):
         #self.move(1820,775)  #1920x1080
         self.move(0,0)  #00
 
- # 宠物右键点击交互
+ # 右键点击交互
     def contextMenuEvent(self, event):
         # 定义菜单
         menu = QMenu(self)
@@ -197,13 +197,13 @@ class DesktopPet(QWidget):
             os.system("start https://music.163.com/#/song?id=431551064")
 
     def mousePressEvent(self, event):
-        # 更改宠物状态为点击
+        # 更改状态为点击
         #self.condition = 1
-        # 更改宠物对话状态
+        # 更改对话状态
         #self.talk_condition = 1
         # 即可调用对话状态改变
         #self.talk()
-        # 即刻加载宠物点击动画
+        # 加载点击动画
         #self.randomAct()
         if event.button() == Qt.LeftButton:
             self.is_follow_mouse = True
