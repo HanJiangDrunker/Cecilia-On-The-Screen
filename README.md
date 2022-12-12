@@ -13,4 +13,3 @@
 蓝奏云： https://hackand.lanzoul.com/iPRb20icr5qj
 
 [![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=HanJiangDrunker&theme=buefy)](https://github.com/anuraghazra/github-readme-stats)  
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=HanJiangDrunker&layout=compact)](https://github.com/anuraghazra/github-readme-stats)
